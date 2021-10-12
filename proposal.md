@@ -103,7 +103,7 @@ Goal Number | Goal |Feature  | Scope of Feature | Order of Execution | Module| R
 4. You are using the term "Money Flow", but it is not listed as a resource.
    What is it? -- Please clarify.
 > Money is a UI Feature. It's a widget which will show customer's bank, merchant's bank, any intermediaries.
-> THis is only to show transparency of a transaction.
+> This is only to show transparency of a transaction.
 > Money flow diagram is shown as follow: [image](https://user-images.githubusercontent.com/78879280/136880962-605282e9-6c17-46a8-8ab1-6cea62f7fb05.png)
 
 
