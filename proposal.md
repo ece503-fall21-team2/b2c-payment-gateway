@@ -105,6 +105,8 @@ Goal Number | Goal |Feature  | Scope of Feature | Order of Execution | Module| R
 > Money is a UI Feature. It's a widget which will show customer's bank, merchant's bank, any intermediaries.
 > This is only to show transparency of a transaction.
 > Money flow diagram is shown as follow: [image](https://user-images.githubusercontent.com/78879280/136880962-605282e9-6c17-46a8-8ab1-6cea62f7fb05.png)
+![Copy of Untitled Diagram drawio](https://user-images.githubusercontent.com/78879280/136881992-c69e9ead-52be-4942-924c-04c3b416fd8e.png)
+
 
 
 5. I cannot see how this statement is reflected in your resource list.
