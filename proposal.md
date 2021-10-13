@@ -83,7 +83,21 @@ Goal Number | Goal |Feature  | Scope of Feature | Order of Execution | Module| R
 
 
 ## Actions Listing
-![Actions - Usecases](./docs/assets/b2c-pament-gateway-use-cases.drawio.png)
+1. User Authentication - READ
+2. Save Card Details (if new card) - CREATE
+3. Transaction Initiation - CREATE
+4. Transaction Confirmation - UPDATE
+5. List Historical Transactions - READ
+6. Ad-hoc Statement Request Generation 
+   1. Create a statmement request - CREATE
+   2. Retrieve transaction history as per requested date filter - READ
+   3. Generate a pdf statement - CREATE
+   4. Email the pdf statement to customer - CREATE 
+7. Retrieve saved card details - READ
+8. Get Details for Money flow widget - READ
+9. Get Details of Pie-chart analytics widget data - READ
+
+
 
 
 # Professor's Comments:
@@ -130,3 +144,45 @@ Goal Number | Goal |Feature  | Scope of Feature | Order of Execution | Module| R
 
 9. You already kind of indicated that the money flow will not be stored, but I'm not sure if this is what you wanted to say.
 > Money flow is just a UI feature, which will be using data from transaction history, merchant. 
+
+10. Although the use case diagram is important and please keep it in your report, this is NOT what I'm looking for.
+    What I would like to see as "Actions" is what actions will your server receive in the request messages from your client.
+    The server will execute these actions on the database resources
+> Made a list of actions
+
+
+### Review 3 - Oct 12, 2021 
+10. In response to my request for "Actions", you have shown a use case diagram.
+This diagram shows what tasks the user will perform using your system.
+By the way, it is difficult for me to establish the correspondence between your table of "Goals" and your use case diagram. For example, I cannot figure out which use cases will display "Money Flow" or "Analytics/Pie Chart" ...?!? --- Please help me and make these relationships explicit.
+> Added more details in use-case diagram and is in sync with Goals
+
+11. For example, in the use case "Enter Card Details", the user will provide his or her card information.
+The client will then send a request message to the server to "Create a new record in the "Card Information" collection.
+This will probably be communicated as an HTTP POST message.
+> Included in actions (point 2.)
+ 
+12.Similarly, in the use case "List Historical Cards", the user will fill out some input fields that the client will submit to the server as an HTTP GET message, to perform an SQL SELECT query on the database and send the result back to the client.
+Both of the above examples are single CRUD operations (create/update/read/delete).
+> Updated CRUD operation type in actions.
+ 
+13. On the other hand, your use case "Statement" is not a simple CRUD action, because the server needs to perform several operations to construct a statement and render it for display at the client. In addition, I see that you also have a "Statement" collection as a resource in your database, so the past generated statements will be stored for record.
+    I would like to know the whole sequence of steps that the server will need to do during a statement construction.
+> Sequence of steps added in actions, sub point of statement generation request
+
+14. Similarly, a client's request to show "Money Flow" requires the server to perform a lot of steps, instead of a single CRUD operation.
+    As you indicated in your Goals table, the server would contact the customer's bank, intermediary bank, etc.
+    Then it would visualize a lineage in a widget containing transactions ... etc.
+    Again, the server's work is not a single CRUD, but rather requires a sequence of steps.
+    Please show these steps explicitly.
+> Money flow widget is just a UI feature which makes shows information from historical trasaction. It doesn't contact the customer's bank, intermediary bank etc.
+> The contact to customer's bank, intermediary bank, merchan't bank is done when we are actually doing a payment transaction. 
+> These are listed as Transaction Initiation, Transaction confirmation in the actions now.
+> MoneyFlow is just a single SELECT query which is getting information from multiple tables for a particular transaction.
+
+15. As well, when a client requests to show "Analytics/Pie Chart", the server will again need to perform a lot of steps to construct a pie chart and then send it back in a response message.
+> The server doesn't know about the pie chart or widgets. It's all in the UI (client end). The client will request data for the pie-chart and server will return the data.
+> The pie-chart will be at a user-level, so server will technically run a SELECT query for that user with some group by on categories, historical transaction etc. 
+
+### Use -case Diogram 
+![Actions - Usecases](./docs/assets/b2c-pament-gateway-use-cases.drawio.png)
