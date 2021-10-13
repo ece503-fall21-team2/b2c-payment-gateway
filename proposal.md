@@ -184,5 +184,5 @@ Both of the above examples are single CRUD operations (create/update/read/delete
 > The server doesn't know about the pie chart or widgets. It's all in the UI (client end). The client will request data for the pie-chart and server will return the data.
 > The pie-chart will be at a user-level, so server will technically run a SELECT query for that user with some group by on categories, historical transaction etc. 
 
-### Use -case Diogram 
+### Use -case Diagram 
 ![Actions - Usecases](./docs/assets/b2c-pament-gateway-use-cases.drawio.png)
