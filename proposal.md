@@ -82,20 +82,22 @@ Goal Number | Goal |Feature  | Scope of Feature | Order of Execution | Module| R
 5|Ease of Access|Statement Download|Users should have options to download statements in pdf format requested on demand. We’ll take range as input from the user with maximum range upto 7 days.|3|Server/DB| 3. Transaction History, 5. Statement, 1. Customer Information|
 
 
-## Actions Listing
-1. User Authentication - READ
-2. Save Card Details (if new card) - CREATE
-3. Transaction Initiation - CREATE
-4. Transaction Confirmation - UPDATE
-5. List Historical Transactions - READ
-6. Ad-hoc Statement Request Generation 
-   1. Create a statmement request - CREATE
-   2. Retrieve transaction history as per requested date filter - READ
-   3. Generate a pdf statement - CREATE
-   4. Email the pdf statement to customer - CREATE 
-7. Retrieve saved card details - READ
-8. Get Details for Money flow widget - READ
-9. Get Details of Pie-chart analytics widget data - READ
+## Actions Listing and Resource Mapping
+|Actions | Resource Number | 
+|-------|------|
+| 1. User Authentication - READ & WRITE - #TODO Ask prof for auth libraries| 1 
+| 2. Save Card Details (if new card) - CREATE| 2|
+| 3. Transaction Initiation - CREATE| 4|
+| 4. Transaction Confirmation - UPDATE| 4|
+| 5. List Historical Transactions - READ| 3|
+|6. Ad-hoc Statement Request Generation |3
+|   6.1. Create a statmement request - CREATE|3
+   6.2. Retrieve transaction history as per requested date filter - READ|3
+   6.3. Generate a pdf statement - CREATE|3
+   6.4. Email the pdf statement to customer - CREATE | 3 
+|7. Retrieve saved card details - READ|2|
+|8. Get Details for Money flow widget - READ|3,6|
+|9. Get Details of Pie-chart analytics widget data - READ|3,6,7|
 
 
 
@@ -184,5 +186,29 @@ Both of the above examples are single CRUD operations (create/update/read/delete
 > The server doesn't know about the pie chart or widgets. It's all in the UI (client end). The client will request data for the pie-chart and server will return the data.
 > The pie-chart will be at a user-level, so server will technically run a SELECT query for that user with some group by on categories, historical transaction etc. 
 
+16. I'm not sure how you're planning to implement user authentication, but I suspect it may not be READ-only and instead may need to store at the server side (WRITE) some token about the authenticated user...?
+Please clarify.
+> Ask prof. for Auth, can we use libraries? Can you give a example for auth code. 
+
+17. in your item #5, List Historical Transactions - READ
+    ...but I thought you will keep record of who and when requested a list of transactions ...?
+    So, shouldn't this also include some server-side writing?
+> List Historical is a GET call in the system. It's a READ-only API which returns list of transactions for the customer.
+> We are not planning to keep a record for who and when requested this API. This is usually a part of audit and is not in scope
+> of the project. 
+
+18.
+in your Actions Listing", please show which specific resources will be acted on by each of your actions.
+> Done in actions list
+
+19. Your proposal mentions contacting the customer's bank, intermediary bank, etc.
+     Question: How will you simulate the bank APIs?
+> We'll figure out a tool which can mock bank api. Postman should be able to do that. 
+> If we didn't find such tool, we'll create a project giving us a dummy server with fixed static data.
+> https://www.postman.com/features/mock-api/
+> https://apiexplorer.openbankproject.com/?tags=#OBPv3_1_0-createAccount
+
 ### Use -case Diagram 
 ![Actions - Usecases](./docs/assets/b2c-pament-gateway-use-cases.drawio.png)
+
+
