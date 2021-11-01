@@ -38,12 +38,11 @@ A project in the evolution of payment gateway from B2B business to B2C model. Cr
 
 3. Transaction History
    1. Transaction type - CREDIT CARD/DEBIT CARD
-   2. Transaction vendor - VISA/MasterCard
-   3. Transaction status - SUCCESS/FAILURE/IN_PROGRESS
-   4. Transaction timestamp
-   5. Merchant_uuid
-   6. customer_uuid
-   7. category_uuid
+   2. Transaction status - SUCCESS/FAILURE/IN_PROGRESS
+   3. Transaction timestamp
+   4. Merchant_uuid
+   5. customer_uuid
+   6. category_uuid
 
 4. Live Transactions
    1. Transaction type
