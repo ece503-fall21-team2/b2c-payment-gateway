@@ -6,7 +6,6 @@
 
 **Team Members:**
 1. Aditi Satish <fa402@scarletmail.rutgers.edu>
-2. Kartik Modi <km1449@scarletmail.rutgers.edu>
 3. Khyati Dinesh Patel <kp935@scarletmail.rutgers.edu>
 4. Prachi Phatale <pp811@scarletmail.rutgers.edu>
 5. Sudarshan Srinivasan <ss3020@scarletmail.rutgers.edu>
