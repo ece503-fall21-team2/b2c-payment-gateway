@@ -1,0 +1,9 @@
+1.Install Express.js for the server and node-postgres (pg) to connect to PostgreSQL.Now we have our dependencies loaded into node_modules and package.json.
+2. After setting the app listen to the port we have chosen, From the command line, we can start the server by hitting index.js.
+     node index.js
+     App running on port 3000.
+   Go to http://localhost:3000 in the URL bar of your browser, and you’ll see the JSON we set earlier.
+3.Now with just these two files index.js and queries.js, we have a server, database, and API all set up. You can start up the server by hitting index.js again.
+     node index.js
+     App running on port 3000.
+  Now if you go to http://localhost:3000/users or http://localhost:3000/users/1, you’ll see the JSON response of the two GET requests. But how can we test our POST, PUT, and DELETE requests
