@@ -4,7 +4,7 @@ Tasks Assignment -
 1. Database Design - KP 
 2. Login - AS
 3. CRU of Customer - PP
-4. Transaction Logic - KM
+4. Transaction Logic - SS
 5. Statement Generation - SS 
 
 
