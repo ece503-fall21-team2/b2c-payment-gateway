@@ -55,3 +55,14 @@ start_date INT,
 end_date INT,
 status VARCHAR(10)
 );
+
+CREATE TABLE live_transaction
+(
+  transaction_type VARCHAR(100),
+  transaction_status VARCHAR(100),
+  transaction_timestamp TIMESTAMP,
+  transaction_amount MONEY,
+  category_uuid uuid references transaction_category (category_uuid),
+  customer_uuid uuid references customer_data (customer_uuid),
+  merchant_details uuid references merchant_details (merchant_uuid)
+);
