@@ -47,9 +47,10 @@ A project in the evolution of payment gateway from B2B business to B2C model. Cr
    1. Transaction type
    2. Transaction status
    3. Transaction timestamp
-   4. Merchant id
-   5. Customer id
-   6. category_uuid
+   4. Transaction_amount
+   5. Merchant id
+   6. Customer id
+   7. category_uuid
 
 5. Statement
    1. Generated Timestamp
