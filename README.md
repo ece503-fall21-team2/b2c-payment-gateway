@@ -7,6 +7,3 @@ Tasks Assignment -
 4. Transaction Logic - SS
 5. Statement Generation - SS 
 
-
-
-7. Analytics - AS
