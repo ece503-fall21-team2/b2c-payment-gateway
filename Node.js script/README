@@ -1,2 +1,0 @@
-This file is to establish connection between postgres and server. 
-Make sure that you have this file and run it using "node script.js" Command so that your server is connected to the database.
