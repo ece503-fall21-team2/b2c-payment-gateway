@@ -1,9 +1,23 @@
-# b2c-payment-gateway
+### b2c-payment-gateway
 
-Tasks Assignment - 
-1. Database Design - KP 
-2. Login - AS
-3. CRU of Customer - PP
-4. Transaction Logic - SS
-5. Statement Generation - SS 
+### Connect to Postgresql Database
+Add Postgresql database connection details in server/db/connect.js file
+
+### Add database tables
+Execute sql scripts from server/scripts.sql file
+
+###Run the project execute following commands in sequence
+1. cd server
+2. npm install
+3. npm start
+4. cd ..
+
+### npm start
+Runs the app in the development mode.
+Open http://localhost:3000 to view it in the browser.
+
+
+
+
+
 
