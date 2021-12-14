@@ -2,10 +2,10 @@ const { Pool } = require('pg');
 
 const pool = new Pool({
   user: 'postgres',
-  password: 'Khyshu', # Enter passsword for your databse
+  password: 'Khyshu', //Enter passsword for your databse
   host: 'localhost',
   port: 5432,
-  database: 'b2c_payment' # Enter your database name
+  database: 'b2c_payment' //Enter your database name
 });
 
 const getClient = async () => {
