@@ -13,12 +13,7 @@
 # Proposal
 
 ## Objective 
-A project in the evolution of payment gateway from B2B business to B2C model. Creating a customer-centric payment gateway, which is exposed and marketed to the user. The payment gateway will offer REST-based APIs for integration with clients.
-
-## Target Clients (Examples):
-1. Small businesses are likely to use 3rd-party payment to sell products online.
-2. Individuals who are looking to receive payments by selling products 1-2-1 like on Facebook marketplace. The individuals will use B2C payment gateway as a platform to receive payment. 
-3. Non-profit organizations requesting donations for their work. The payment gateway will provide embedded web component as 1-click donation button. 
+A project in the evolution of payment gateway from B2B business to B2C model. Creating a customer-centric banking application, which is exposed and marketed to the user. This application will offer REST-based APIs for integration with clients.
 
 ## Resources Listing - ( All are Collection of records - PERSISTENT)
 
