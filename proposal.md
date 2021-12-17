@@ -1,7 +1,6 @@
 # Programming Methodology For Finance Project for  Fall 2021
 
-**Project Name:**  B2C FOCUSED PAYMENTS
-
+**Project Name:**  B2C BANKING APPLICATION
 **Team No: 02**
 
 **Team Members:**
